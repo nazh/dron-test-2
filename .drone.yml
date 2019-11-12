@@ -9,3 +9,7 @@ steps:
   - pip install -r requirements.txt
   - python capirca/aclgen.py --base_directory morales-pol --output_directory morales-pol/acl/
 
+- name: pushback
+  image: appleboy/drone-git-push
+  remote: origin
+  branch: new-acl
