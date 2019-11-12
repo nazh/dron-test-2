@@ -1,0 +1,20 @@
+header {
+  comment:: "Applied globaly"
+  target:: ciscoasa GLOBAL_ACL
+}
+
+term accept-icmp {
+  comment:: "Allow ICMP any any"
+  protocol:: icmp
+  logging:: syslog
+  action:: accept
+}
+
+#include includes/TEST-Internet.inc
+
+term default-permit {
+  comment:: "Deny what's left."
+  action:: deny
+  logging:: syslog 
+}
+
