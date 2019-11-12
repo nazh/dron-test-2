@@ -10,8 +10,8 @@ steps:
   - python capirca/aclgen.py --base_directory morales-pol --output_directory morales-pol/acl/
   - cat morales-pol/acl/test.asa
 
-#- name: pushback
-#  image: appleboy/drone-git-push
-#  remote: git@github.com:nazh/dron-test-2.git
+- name: pushback
+  image: appleboy/drone-git-push
+  remote: git@github.com:nazh/dron-test-2.git
 #  remote_name: origin
-#  branch: master
+  branch: new-acl
