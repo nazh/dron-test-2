@@ -11,5 +11,6 @@ steps:
 
 - name: pushback
   image: appleboy/drone-git-push
+  remote: git@github.com:nazh/dron-test-2.git
   remote_name: origin
   branch: new-acl
