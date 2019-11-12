@@ -1,4 +1,3 @@
-clear configure access-list GLOBAL_ACL
 access-list GLOBAL_ACL remark $Id:$
 access-list GLOBAL_ACL remark $Date:$
 access-list GLOBAL_ACL remark $Revision:$
