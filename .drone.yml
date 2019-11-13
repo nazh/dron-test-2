@@ -7,8 +7,9 @@ steps:
   image: python:3.6
   commands:
   - pip install -r requirements.txt
+  - cp  morales-pol/acl/test.asa morales-pol/acl/test.asa.bckp
   - python capirca/aclgen.py --base_directory morales-pol --output_directory morales-pol/acl/
-  - ls -al morales-pol/acl/test.asa
+  - diff morales-pol/acl/test.asa morales-pol/acl/test.asa.bckp
 
 - name: pushback
   image: appleboy/drone-git-push
