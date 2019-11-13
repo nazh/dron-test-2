@@ -12,6 +12,9 @@ steps:
 
 - name: pushback
   image: appleboy/drone-git-push
+  environment:
+    GIT_PUSH_SSH_KEY:
+        from_secret: github-ssh-key
   settings:
     remote-name: origin
     remote: git@github.com:nazh/dron-test-2.git
