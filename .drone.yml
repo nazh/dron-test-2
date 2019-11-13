@@ -12,13 +12,15 @@ steps:
 
 - name: pushback
   image: appleboy/drone-git-push
-  remote: git@github.com:nazh/dron-test-2.git
-#  remote_name: origin
-  branch: staging
+  settings:
+    remote-name: origin
+    remote: git@github.com:nazh/dron-test-2.git
+    branch: staging
+    local_branch: development
 
 trigger:
   repo:
   - nazh/dron-test-2
   branch:
-  - new-acl
+  - development
 
