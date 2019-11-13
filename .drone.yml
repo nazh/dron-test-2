@@ -15,3 +15,10 @@ steps:
   remote: git@github.com:nazh/dron-test-2.git
 #  remote_name: origin
   branch: new-acl
+
+trigger:
+  repo:
+  - nazh/dron-test-2
+  branch:
+  - new-a
+
