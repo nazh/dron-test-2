@@ -8,11 +8,11 @@ term accept-http/s-isrtoinet {
   action:: accept
 }
 
-term accept-dns2-isrtoinet {
-  comment:: "Allow DNS2_TCP access"
+term accept-dns-isrtoinet {
+  comment:: "Allow DNS_TCP access"
   destination-port:: DNS
   protocol:: tcp
-  source-address:: RFC_6598 
+  source-address:: NA-UCS-Srv_subnt_10.189.9.0/24 
   destination-address:: GOOGLE_PUBLIC_DNS
   logging:: syslog
   action:: accept
