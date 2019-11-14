@@ -21,6 +21,8 @@ steps:
     remote: git@github.com:nazh/dron-test-2.git
     branch: staging
     local_branch: development
+    commit: true
+    commit_message: 'Commit before pushing out'
 
 trigger:
   repo:
