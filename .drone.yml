@@ -28,7 +28,7 @@ steps:
 - name: slack-note
   image: plugins/slack
   settings:
-    webhook: https://hooks.slack.com/services/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
+    webhook: https://hooks.slack.com/services/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
     channel: grafana_alerts
     username: drone
   when:
