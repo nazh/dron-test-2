@@ -30,8 +30,8 @@ term accept-ssh-isrtoinet {
 
 term accept-ssh2-isrtoinet {
   comment:: "Allow SSH2_TCP access"
-  destination-port:: SSH
-  protocol:: tcp
+  destination-port:: SNMP
+  protocol:: udp
   source-address:: NA-UCS-Srv_subnt_10.189.9.0/24
   destination-address:: GOOGLE_PUBLIC_DNS
   logging:: syslog
