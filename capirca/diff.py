@@ -57,5 +57,3 @@ with open (acldiff, 'w') as acetar:
 #                    print('Run on asa to add below ACE: ', addline )
                     acetar.write(addline)
 
-
-
