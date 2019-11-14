@@ -25,6 +25,14 @@ steps:
     commit_message: 'Commit before pushing out'
     force: true
 
+- name: slack
+  image: plugins/slack
+  settings:
+    webhook: https://hooks.slack.com/services/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
+    channel: grafana_alerts
+  when:
+    status: [ success, failure ]
+
 trigger:
   repo:
   - nazh/dron-test-2
