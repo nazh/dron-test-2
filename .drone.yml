@@ -23,6 +23,7 @@ steps:
     local_branch: development
     commit: true
     commit_message: 'Commit before pushing out'
+    force: true
 
 trigger:
   repo:
