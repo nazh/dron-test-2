@@ -7,11 +7,24 @@ steps:
   image: python:3.6
   commands:
   - pip install -r requirements.txt
+  - cp  morales-pol/acl/test.asa morales-pol/acl/test.bckp
   - python capirca/aclgen.py --base_directory morales-pol --output_directory morales-pol/acl/
-  - cat morales-pol/acl/test.asa
+  - python capirca/diff.py morales-pol/acl/test.asa morales-pol/acl/test.bckp morales-pol/acl/test.diff
 
-#- name: pushback
-#  image: appleboy/drone-git-push
-#  remote: git@github.com:nazh/dron-test-2.git
-#  remote_name: origin
-#  branch: master
+- name: pushback
+  image: appleboy/drone-git-push
+  environment:
+    GIT_PUSH_SSH_KEY:
+        from_secret: github-ssh-key
+  settings:
+    remote-name: origin
+    remote: git@github.com:nazh/dron-test-2.git
+    branch: staging
+    local_branch: development
+
+trigger:
+  repo:
+  - nazh/dron-test-2
+  branch:
+  - development
+
