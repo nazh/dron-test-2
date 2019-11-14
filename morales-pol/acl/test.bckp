@@ -1,3 +1,4 @@
+clear configure access-list GLOBAL_ACL
 access-list GLOBAL_ACL remark $Id:$
 access-list GLOBAL_ACL remark $Date:$
 access-list GLOBAL_ACL remark $Revision:$
@@ -15,7 +16,11 @@ access-list GLOBAL_ACL extended permit tcp 10.189.9.0 255.255.255.0 0.0.0.0 0.0.
 access-list GLOBAL_ACL extended permit tcp 10.189.9.0 255.255.255.0 0.0.0.0 0.0.0.0 eq https log
 
 
+access-list GLOBAL_ACL remark accept-dns-isrtoinet
+access-list GLOBAL_ACL remark Allow DNS_TCP access
+access-list GLOBAL_ACL extended permit tcp 10.189.9.0 255.255.255.0 host 8.8.8.8 eq domain log
+
+
 access-list GLOBAL_ACL remark default-permit
 access-list GLOBAL_ACL remark Deny what's left.
 access-list GLOBAL_ACL extended deny ip any any log
-

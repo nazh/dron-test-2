@@ -1,5 +1,0 @@
-Lines to remove on ASA: 
-Lines to add on ASA: 
-access-list GLOBAL_ACL line 12 remark accept-dns-isrtoinet
-access-list GLOBAL_ACL line 13 remark Allow DNS_TCP access
-access-list GLOBAL_ACL line 14 extended permit tcp 10.189.9.0 255.255.255.0 host 8.8.8.8 eq domain log
