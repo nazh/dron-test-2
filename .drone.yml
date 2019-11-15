@@ -28,7 +28,8 @@ steps:
 - name: slack
   image: plugins/slack
   settings:
-    webhook: 
+    webhook:
+      from_secret: slack-url 
     channel: grafana_alerts
 
 trigger:
