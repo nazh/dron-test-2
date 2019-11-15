@@ -28,8 +28,8 @@ steps:
 - name: slack-note
   image: plugins/slack-blame
   settings:
-    token: 
-      from_sercret: slack-tokin
+    token: xoxp-466225789781-465289949328-480189430517-622d0c16426277ffd1d7269875f7ecd7 
+#      from_sercret: slack-tokin
 #    webhook: https://hooks.slack.com/services/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
     channel: grafana_alerts
 #    username: drone
