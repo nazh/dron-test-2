@@ -25,7 +25,7 @@ steps:
     commit_message: 'Commit before pushing out'
     force: true
 
-- name: slack
+- name: slack2
   image: plugins/slack
   settings:
     webhook:
