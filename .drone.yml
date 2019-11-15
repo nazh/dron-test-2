@@ -30,9 +30,15 @@ steps:
   settings:
     token: 
       from_sercret: slack-tokin
-    webhook: https://hooks.slack.com/services/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
+    webhook: https://hooks.slack.com/services/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
     channel: grafana_alerts
-#    username: webhookbot
+    username: drone
+    template: >
+      {{#success build.status}}
+        build {{build.number}} succeeded. Good job.
+      {{else}}
+        build {{build.number}} failed. Fix me please.
+      {{/success}}
 #  when:
 #    status: [ success, failure ]
 
