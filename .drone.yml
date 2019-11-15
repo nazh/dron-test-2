@@ -26,13 +26,15 @@ steps:
     force: true
 
 - name: slack-note
-  image: plugins/slack
+  image: plugins/slack-blame
   settings:
+    token: 
+      from_sercret: slack-user-tokin
     webhook: https://hooks.slack.com/services/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
     channel: grafana_alerts
 #    username: webhookbot
-  when:
-    status: [ success, failure ]
+#  when:
+#    status: [ success, failure ]
 
 trigger:
   repo:
