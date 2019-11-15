@@ -31,6 +31,9 @@ steps:
     webhook:
       from_secret: slack-url 
     channel: grafana_alerts
+    username: drone
+  when:
+    status: [ success, failure ]
 
 trigger:
   repo:
