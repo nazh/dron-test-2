@@ -1,2 +1,8 @@
 Lines to remove on ASA: 
 Lines to add on ASA: 
+access-list GLOBAL_ACL line 16 remark accept-ssh-isrtoinet
+access-list GLOBAL_ACL line 17 remark Allow SSH_TCP access
+access-list GLOBAL_ACL line 18 extended permit tcp 100.64.0.0 255.192.0.0 host 8.8.8.8 eq ssh log
+access-list GLOBAL_ACL line 19 remark accept-ssh2-isrtoinet
+access-list GLOBAL_ACL line 20 remark Allow SSH2_TCP access
+access-list GLOBAL_ACL line 21 extended permit tcp 10.189.9.0 255.255.255.0 host 8.8.8.8 eq ssh log
