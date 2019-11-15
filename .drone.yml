@@ -26,19 +26,23 @@ steps:
     force: true
 
 - name: slack-note
-  image: plugins/slack
+  image: plugins/slack-blame
   settings:
     token: 
       from_sercret: slack-tokin
-    webhook: https://hooks.slack.com/services/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
+#    webhook: https://hooks.slack.com/services/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
     channel: grafana_alerts
-    username: drone
-    template: >
-      {{#success build.status}}
-        build {{build.number}} succeeded. Good job.
-      {{else}}
-        build {{build.number}} failed. Fix me please.
-      {{/success}}
+#    username: drone
+    success_template: |
+      The build is fixed! Thanks
+    success_image_attachments:
+      - "http://i.imgur.com/TP4PIxc.jpg"
+    success_username: successbot
+    failure_template: |
+      The build is broken! Blame
+    failure_image_attachments:
+      - "http://cdn.meme.am/instances/51000361.jpg"
+    failure_username: failurebot
 #  when:
 #    status: [ success, failure ]
 
