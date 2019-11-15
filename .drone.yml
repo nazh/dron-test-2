@@ -26,11 +26,11 @@ steps:
     force: true
 
 - name: slack-note
-  image: plugins/slack-blame
+  image: plugins/slack
   settings:
     token: 
-      from_sercret: slack-user-tokin
-    webhook: https://hooks.slack.com/services/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
+      from_sercret: slack-tokin
+    webhook: https://hooks.slack.com/services/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
     channel: grafana_alerts
 #    username: webhookbot
 #  when:
