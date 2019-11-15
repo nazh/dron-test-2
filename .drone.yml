@@ -28,7 +28,7 @@ steps:
 - name: slack-note
   image: plugins/slack
   settings:
-    webhook: https://hooks.slack.com/services/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
+    webhook: https://hooks.slack.com/services/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
     channel: grafana_alerts
 #    username: webhookbot
   when:
