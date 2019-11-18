@@ -34,7 +34,7 @@ steps:
     username: drone
     template: >
       {{#success build.status}}
-        build {{build.number}}, {{build.commit}} by {{build.author}} succeeded.
+        build {{build.number}}, {{build.link}}, {{build.ref}}, {{build.event}} succeeded.
       {{else}}
         build {{build.number}},{{build.commit}} by {{build.author}} failed.
       {{/success}}
