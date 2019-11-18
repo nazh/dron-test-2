@@ -5,20 +5,14 @@ WHOIS = 43/udp
 SSH = 22/tcp
 TELNET = 23/tcp
 SMTP = 25/tcp
-MAIL_SERVICES = SMTP
-                ESMTP
-                SMTP_SSL
-                POP_SSL
 TIME = 37/tcp 37/udp
 TACACS = 49/tcp
 DNS = 53/tcp 53/udp
 BOOTPS = 67/udp   # BOOTP server
 BOOTPC = 68/udp   # BOOTP client
-DHCP = BOOTPS
-       BOOTPC
 TFTP = 69/tcp 69/udp
 HTTP = 80/tcp
-WEB_SERVICES = HTTP HTTPS
+HTTPS = 443/tcp
 POP3 = 110/tcp
 RPC = 111/udp
 IDENT = 113/tcp 113/udp
@@ -34,117 +28,4 @@ SNMP_TRAP = 162/udp
 BGP = 179/tcp
 IMAP3 = 220/tcp
 LDAP = 389/tcp
-LDAP_SERVICE = LDAP
-               LDAPS
-HTTPS = 443/tcp
-MS_445 = 445/tcp
-SMTP_SSL = 465/tcp
-IKE = 500/udp
-SYSLOG = 514/udp
-RTSP = 554/tcp
-ESMTP = 587/tcp
-LDAPS = 636/tcp
-IMAPS = 993/tcp
-POP_SSL = 995/tcp
-HIGH_PORTS = 1024-65535/tcp 1024-65535/udp
-MSSQL = 1433/tcp
-MSSQL_MONITOR = 1434/tcp
-RADIUS = 1812/tcp 1812/udp
-HSRP = 1985/udp
-NFSD = 2049/tcp 2049/udp
-NETFLOW = 2056/udp
-SQUID_PROXY = 3128/tcp
-MYSQL = 3306/tcp
-RDP = 3389/tcp
-IPSEC = 4500/udp
-POSTGRESQL = 5432/tcp
-TRACEROUTE = 33434-33534/udp
-IRMC = 602-609/tcp
-
-
-
-
-CIS_RPC = 48660-48669/tcp
-TCP_48910 = 48910/tcp
-TCP_49070 = 49070/tcp
-TCP_49071 = 49071/tcp
-TCP_49398 = 49398/tcp
-TCP_49146 = 49146/tcp
-TCP_49165 = 49165/tcp
-TCP_48950-49069 = 48950-49069/tcp
-TCP_49100 = 49100/tcp
-TCP_49102-49145 = 49102-49145/tcp
-UDP_161 = 161/udp
-TCP_48685 = 48685/tcp
-TCP_49080 = 49080/tcp
-TCP_49081 = 49081/tcp
-TCP_49082 = 49082/tcp
-TCP_49083 = 49083/tcp
-TCP_49084 = 49084/tcp
-TCP_49085 = 49085/tcp
-TCP_49813 = 49813/tcp
-TCP_48913 = 48913/tcp
-TCP_49078 = 49078/tcp
-TCP_49079 = 49079/tcp
-TCP_49405-49406 = 49405-49406/tcp
-TCP_49410-49420 = 49410-49420/tcp
-TCP_5900 = 5900/tcp
-TCP_5901 = 5901/tcp
-TCP_17988 = 17988/tcp
-TCP_17990 = 17990/tcp
-TCP_623 = 623/tcp
-TCP_2068 = 2068/tcp
-TCP_8080 = 8080/tcp
-TCP_8081 = 8081/tcp
-TCP_1098 = 1098/tcp
-TCP_1099 = 1099/tcp
-TCP_3873 = 3873/tcp
-TCP_9216 = 9216/tcp
-TCP_9443 = 9443/tcp
-TCP_902 = 902/tcp
-UDP_902 = 902/udp
-TCP_903 = 903/tcp
-UDP_623 = 623/udp
-TCP_49100-49145 = 49100-49145/tcp
-TCP_49076 = 49076/tcp
-TCP_2198 = 2198/tcp
-TCP_2199 = 2199/tcp
-TCP_8208 = 8208/tcp
-TCP_29418 = 29418/tcp
-TCP_49380-49385 = 49380-49385/tcp
-TCP_49521-49530 = 49521-49530/tcp
-TCP_8089 = 8089/tcp
-TCP_49490-49520 = 49490-49520/tcp
-TCP_9997 = 9997/tcp
-TCP_9090 = 9090/tcp
-Drac_iLO = HTTP
-           HTTPS
-           TCP_17988
-           TCP_17990
-           TCP_2068
-           TCP_2198
-           TCP_2199
-           TCP_5900
-           TCP_5901
-           TCP_623
-           TCP_8208
-
-DefencePro = HTTP
-             HTTPS
-             TCP_1098
-             TCP_1099
-             TCP_3873
-             TCP_9216
-TCP_iRMC = HTTP
-           HTTPS
-           TCP_623
-UDP_iRMC = UDP_623
-TCP_ESXi = HTTPS
-           TCP_902
-           TCP_903
-           TCP_9443
-UDP_ESXi = UDP_902
-TCP_CIMC = HTTPS
-	   2068/tcp
-UDP_CIMC = 623/udp
 

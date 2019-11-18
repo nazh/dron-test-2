@@ -12,23 +12,23 @@ access-list GLOBAL_ACL extended permit icmp any any log
 
 access-list GLOBAL_ACL remark accept-http/s-isrtoinet
 access-list GLOBAL_ACL remark Allow HTTP/S access
-access-list GLOBAL_ACL extended permit tcp 10.189.9.0 255.255.255.0 0.0.0.0 0.0.0.0 eq www log
-access-list GLOBAL_ACL extended permit tcp 10.189.9.0 255.255.255.0 0.0.0.0 0.0.0.0 eq https log
+access-list GLOBAL_ACL extended permit tcp 100.64.0.0 255.192.0.0 0.0.0.0 0.0.0.0 eq www log
+access-list GLOBAL_ACL extended permit tcp 100.64.0.0 255.192.0.0 0.0.0.0 0.0.0.0 eq https log
 
 
 access-list GLOBAL_ACL remark accept-dns-isrtoinet
 access-list GLOBAL_ACL remark Allow DNS_TCP access
-access-list GLOBAL_ACL extended permit tcp 10.189.9.0 255.255.255.0 host 8.8.8.8 eq domain log
+access-list GLOBAL_ACL extended permit tcp 100.64.0.0 255.192.0.0 host 8.8.8.8 eq domain log
 
 
 access-list GLOBAL_ACL remark accept-ssh-isrtoinet
 access-list GLOBAL_ACL remark Allow SSH_TCP access
-access-list GLOBAL_ACL extended permit tcp 100.64.0.0 255.192.0.0 host 8.8.8.8 eq ssh log
+access-list GLOBAL_ACL extended permit udp 100.64.0.0 255.192.0.0 host 8.8.8.8 eq snmp log
 
 
-access-list GLOBAL_ACL remark accept-ssh2-isrtoinet
-access-list GLOBAL_ACL remark Allow SSH2_TCP access
-access-list GLOBAL_ACL extended permit tcp 10.189.9.0 255.255.255.0 host 8.8.8.8 eq ssh log
+access-list GLOBAL_ACL remark accept-tacacs-isrtoinet
+access-list GLOBAL_ACL remark Allow Tacacs access
+access-list GLOBAL_ACL extended permit tcp 100.64.0.0 255.192.0.0 host 8.8.8.8 eq tacacs log
 
 
 access-list GLOBAL_ACL remark default-permit

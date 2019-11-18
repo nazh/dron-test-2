@@ -7,9 +7,9 @@ steps:
   image: python:3.6
   commands:
   - pip install -r requirements.txt
-  - cp  morales-pol/acl/test.asa morales-pol/acl/test.bckp
-  - python capirca/aclgen.py --base_directory morales-pol --output_directory morales-pol/acl/
-  - python capirca/diff.py morales-pol/acl/test.asa morales-pol/acl/test.bckp morales-pol/acl/test.diff
+  - cp  cust-pol/acl/test.asa cust-pol/acl/test.bckp
+  - python capirca/aclgen.py --base_directory cust-pol --output_directory cust-pol/acl/
+  - python capirca/diff.py cust-pol/acl/test.asa cust-pol/acl/test.bckp cust-pol/acl/test.diff
 
 - name: pushback
   image: appleboy/drone-git-push
@@ -32,6 +32,12 @@ steps:
       from_secret: slack-url 
     channel: grafana_alerts
     username: drone
+    template: >
+      {{#success build.status}}
+        build {{build.number}} succeeded.
+      {{else}}
+        build {{build.number}} failed.
+      {{/success}}
   when:
     status: [ success, failure ]
 
