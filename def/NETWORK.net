@@ -70,6 +70,7 @@ GOOGLE_PUBLIC_DNS_ANYCAST = 8.8.4.4/32               # IPv4 Anycast
                             2001:4860:4860::8844/128 # IPv6 Anycast
                             2001:4860:4860::8888/128 # IPv6 Anycast
 GOOGLE_PUBLIC_DNS = 8.8.8.8/32
+GOOGLE_PUBLIC_DNS_2 = 8.8.8.9/32
 
 GOOGLE_DNS = GOOGLE_PUBLIC_DNS_ANYCAST
 
