@@ -22,7 +22,7 @@ steps:
     branch: staging
     local_branch: development
     commit: true
-    commit_message: 'Commit before pushing out'
+    commit_message: 'Commit before pushing out  '
     force: true
 
 - name: slack2
