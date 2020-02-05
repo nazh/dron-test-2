@@ -47,7 +47,6 @@ RESERVED = 0.0.0.0/8           # reserved
            FC00::/7            # unique local unicast
            FE00::/9            # reserved by IETF
            LINKLOCAL           # link local unicast
-           SITELOCAL           # IPv6 site-local
 
 ANY = 0.0.0.0/0
 
